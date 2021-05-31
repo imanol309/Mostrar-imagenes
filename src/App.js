@@ -1,25 +1,29 @@
-import React,{useState}from 'react';
+import React,{useState, useEffect}from 'react';
+import llamarApi from './server/llamarApi'
 import './app.css'
 
-const gif = ['https://media3.giphy.com/media/LMrQR7qJXg0UoMquoI/giphy.gif',
-'https://media1.giphy.com/media/5SAPzzr9MUdpW1jXQA/giphy.gif?cid=ecf05e473qeo4rbtgvp18a241kvj43o8r0fsij6wrddgp33j&rid=giphy.gif&ct=g']
-
-const gifActualizando = ["https://media1.giphy.com/media/PWVDv5lvxJc40KCLK5/giphy.gif?cid=ecf05e47pksobct3r2wrb69opzs3du8unyoakeonwpvwafa8&rid=giphy.gif&ct=g"]
-
 function App() {
+  const [valor, valorActualizado] = useState([])
+  const valorOne = (document.getElementById('valorOne') ||"").value ||"";
 
-  const [valor, valorActualizado] = useState(gif)
+  useEffect(() => {
+    console.log('Funciona actualizada');
+    llamarApi(valorOne).then(valor => valorActualizado(valor))
+  })
 
   return (
     <div className="App">
+      <section className="buscador">
+        <p className="text">Escribe el gif que quiere buscar</p>
+        <input id="valorOne" className="input" type="text" placeholder="gifs"/> <br/>
+        <br/>
+        <button className="btn">Buscar</button>
+      </section>
        <section className="contenedor-app">
-         {
-           valor.map(dosGif => <img src={dosGif} alt="" />)
-         }
+            {
+              valor.map(dosGif => <img className="img" src={dosGif} alt="" />)
+            }
        </section>
-       <button onClick={() => valorActualizado(gifActualizando)}>
-          Cambiar Nuevo
-        </button>
     </div>
   );
 }
