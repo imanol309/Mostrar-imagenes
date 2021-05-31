@@ -1,10 +1,10 @@
 const keyApi = '07qWToGtfryS9dtJqnpB9EQdob7ZC8dK&q'
 
-export default function llamarApi(estilo) {
+export default async function llamarApi(estilo) {
 
     const urlAPi = [`https://api.giphy.com/v1/gifs/search?api_key=${keyApi}=${estilo}&limit=20&offset=0&rating=g&lang=en`]
 
-    return fetch(urlAPi)
+    return await fetch(urlAPi)
     .then(res => res.json())
     .catch(error => console.log('REVISA, encotre un error ',error))
     .then(respuesta => {

@@ -7,7 +7,6 @@ function App() {
   const valorOne = (document.getElementById('valorOne') ||"").value ||"";
 
   useEffect(() => {
-    console.log('Funciona actualizada');
     llamarApi(valorOne).then(valor => valorActualizado(valor))
   })
 
