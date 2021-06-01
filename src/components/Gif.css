@@ -1,0 +1,14 @@
+.contenedor-app{
+    width:80%;
+    background: #f1bc29;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img{
+    width:100%;
+}
+
+.title{
+    text-align:center;
+}
