@@ -6,12 +6,19 @@ import './Gif.css'
 
 export default function Gif(){
 
-    const [valor, valorActualizado] = useState([])
-    const valorOne = (document.getElementById('valorOne') ||"").value ||"";
-  
-    useEffect(() => {
-      llamarApi(valorOne).then(valor => valorActualizado(valor))
+    const [valor, valorActualizado] = useState((document.getElementById('valorOne') ||"").value ||"")
+    
+    // const valorOne = ;
+    const btn = (document.getElementById('btn') ||"")
+
+    btn.addEventListener('click', () =>{
+        valorActualizado((document.getElementById('valorOne') ||"").value ||"")
     })
+
+    useEffect(() => {
+        llamarApi(valor).then(valor => valorActualizado(valor))
+    },[valor])
+
   
     return (   
     <section className="contenedor-app">    

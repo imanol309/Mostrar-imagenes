@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Buscador/>
-      <Gif/>
+      <Gif/> 
     </div>
   ); 
 }
