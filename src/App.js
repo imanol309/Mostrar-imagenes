@@ -1,7 +1,6 @@
 import React from 'react';
 import {  Link,  Route } from 'wouter'
-import Gif from './components/Gif'
-import Buscador from './components/Buscador'
+import Buscador from './components/pages/Buscador'
 import './app.css'
 
 function App() {
@@ -9,7 +8,6 @@ function App() {
     <div className="App">
       <Link className="btnBuscador" to="/Buscador">Buscador</Link>
       <Route path="/Buscador" component={Buscador}/>
-      <Gif/> 
     </div>
   ); 
 }

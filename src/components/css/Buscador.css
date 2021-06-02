@@ -1,0 +1,22 @@
+.buscador{
+    width:100%;
+    height:80%;
+    background: rgb(0, 0, 0);
+}
+
+.text{
+    text-align: center;
+    font-size:30px;
+    color: blanchedalmond;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.input{
+    margin-left: auto;
+    margin-right: auto;
+    width:99.5%;
+    border-radius: none;
+    font-size:30px;
+    position: relative;
+    bottom:25px;
+}
