@@ -1,7 +1,11 @@
 import React from 'react'
+import NavBar from '../componetsGlobal/navBar'
 
-export default function inicio() {
+export default function Inicio() {
   return (
-    <div>Bienvenido</div>
+    <div>
+      <NavBar>
+      </NavBar>
+    </div>
   )
 }
