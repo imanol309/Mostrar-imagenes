@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./navBar.css";
+
 export default function NavBar() {
   // const valorSelecionado = 0;
   const h4RefOne = useRef();
@@ -30,6 +31,9 @@ export default function NavBar() {
         </div>
         <div>
           {setValor && <h4>Estes es valor que selecionaste {valor}</h4>}
+        </div>
+        <div>
+        {setValor && <h4>Estes es valor que selecionaste {valor}</h4>}
         </div>
       </div>
     </div>
