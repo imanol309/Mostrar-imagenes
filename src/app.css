@@ -3,31 +3,17 @@ body{
 }
 
 .App{
-    position: relative;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-button{
-    margin-left: 10%;
-}
-
-
-.btn{
-    width:80%;
-    height:50px;
-    font-size:30px;
-    color: rgb(255, 255, 255);
-    background:rgb(255, 0, 242);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .btnBuscador{
     font-size: 30px;
-    padding:2%;
+    padding: 1%;
     background:rgb(0, 0, 0);
     color:floralwhite;
-    border-radius: 10px; 
-    top: 150px;
-    position: absolute;
+    border-radius: 5px; 
+    text-decoration: none;
 }
